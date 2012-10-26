@@ -44,26 +44,3 @@ def get_gaussian_results(filename):
         s=input.readline()
 
     return h, atom_l, mass_l, cart_l
-
-def get_gaussian_ir(filename):
-    """Extract IR frequencies and intensities from Gaussian output
-    file"""
-
-    freqs=[]
-    intensities=[]
-
-    input = open(filename,'r')
-    
-    s=input.readline()
-    while s:
-        if s.find(' Frequencies -- ')!=-1:
-            for frq in s.split()[2:]:
-                freqs.append(float(frq))
-        if s.find(' IR Inten    -- ')!=-1:
-            for intensity in s.split()[3:]:
-                intensities.append(float(intensity))
-        s=input.readline()
-
-    return array(freqs),array(intensities)
-
-
