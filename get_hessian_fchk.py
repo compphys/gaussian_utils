@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from numpy import *
-from atomic_data import label,mass
+from utils.atomic_data import label,mass
 
 def get_gaussian_results(filename):
     """Reads information from Gaussian formatted checkpoint files."""

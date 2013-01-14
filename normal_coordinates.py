@@ -6,7 +6,7 @@ def compute_normal_coord(h,mass_l):
     """Compute normal coordinates from Cartesian Hessian."""
 
     from scipy import linalg
-    from conversion import amu2au
+    from utils.conversion import amu2au
 
     #number of Cartesian coordinates
     N=size(h,0)

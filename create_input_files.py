@@ -4,9 +4,9 @@
 import sys
 from numpy import *
 
-from gaussian_file_handling import get_gaussian_results
-from normal_coordinates import compute_normal_coord
-from conversion import au2cm,au2kcal,au2ang
+from gaussian_utils.get_hessian_fchk import get_gaussian_results
+from gaussian_utils.normal_coordinates import compute_normal_coord
+from utils.conversion import au2cm,au2kcal,au2ang
 
 if len(sys.argv)<=1:
     print __doc__
@@ -16,7 +16,7 @@ def print_input_files(filename,atom_l,cart_l,Q,mode_l):
     """Generate input files from template file for finite displacements
     along the normal modes"""
 
-    from utils import from_file, to_file
+    from utils.utils import from_file, to_file
     import sys
 
     step_size = 0.01
