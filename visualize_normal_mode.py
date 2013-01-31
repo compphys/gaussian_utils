@@ -7,6 +7,8 @@ from gaussian_file_handling import get_gaussian_results
 from normal_coordinates import compute_normal_coord, print_input_files
 from conversion import au2cm,au2kcal,au2ang
 
+test
+
 if len(sys.argv)<=2:
     print __doc__
     sys.exit(0)
