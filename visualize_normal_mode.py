@@ -3,9 +3,9 @@
 
 import sys
 from numpy import *
-from gaussian_file_handling import get_gaussian_results
-from normal_coordinates import compute_normal_coord, print_input_files
-from conversion import au2cm,au2kcal,au2ang
+from gaussian_utils.get_hessian_fchk import get_gaussian_results
+from gaussian_utils.normal_coordinates import compute_normal_coord
+from utils.conversion import au2cm,au2kcal,au2ang
 
 if len(sys.argv)<=2:
     print __doc__
